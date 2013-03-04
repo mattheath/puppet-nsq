@@ -19,4 +19,18 @@ class nsq {
     ensure => '0.2.18-boxen1',
   }
 
+  # Fire up our nsqd service
+
+  file { '/Library/LaunchDaemons/dev.nsqd.plist':
+    content => template('nsq/dev.nsqd.plist.erb'),
+    group   => 'wheel',
+    owner   => 'root',
+    require => Package['boxen/brews/nsq'],
+    notify  => Service['dev.nsqd'],
+  }
+
+  service { 'dev.nsqd':
+    ensure  => running,
+  }
+
 }
