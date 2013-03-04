@@ -18,10 +18,21 @@ o8o        `8  8""88888P'   `Y8bood8P'Ybd'
 include nsq
 ```
 
+This will launch nsqd and nsqlookupd as services, and point nsqd at nsqlookupd.
+
 ## Required Puppet Modules
 
 * `boxen`
 * `homebrew`
+
+## Environment
+
+Once installed, you can access the following variables in your environment, projects, etc:
+
+* BOXEN_NSQD_TCP_PORT: the configured nsqd TCP port (default 14150)
+* BOXEN_NSQD_HTTP_PORT: the configured nsqd HTTP port (default 14151)
+* BOXEN_NSQLOOKUPD_TCP_PORT: the configured nsqlookupd TCP port (default 14160)
+* BOXEN_NSQLOOKUPD_HTTP_PORT: the configured nsqlookupd HTTP port (default 14161)
 
 ## Development
 
