@@ -19,6 +19,13 @@ class nsq {
     ensure => '0.2.18-boxen1',
   }
 
+  # Make ports and listening addresses available as environment vars
+
+  file { "${boxen::config::envdir}/nsq.sh":
+    content => template('nsq/env.sh.erb'),
+    require => File[$boxen::config::envdir]
+  }
+
   # Fire up our nsqd service
 
   file { '/Library/LaunchDaemons/dev.nsqd.plist':
