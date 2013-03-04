@@ -33,4 +33,18 @@ class nsq {
     ensure  => running,
   }
 
+  # Fire up our nsqlookupd service
+
+  file { '/Library/LaunchDaemons/dev.nsqlookupd.plist':
+    content => template('nsq/dev.nsqlookupd.plist.erb'),
+    group   => 'wheel',
+    owner   => 'root',
+    require => Package['boxen/brews/nsq'],
+    notify  => Service['dev.nsqlookupd'],
+  }
+
+  service { 'dev.nsqlookupd':
+    ensure  => running,
+  }
+
 }
