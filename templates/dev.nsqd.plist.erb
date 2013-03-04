@@ -17,6 +17,7 @@
       <string>-data-path=<%= scope.lookupvar "nsq::config::datadir" %></string>
       <string>-http-address=<%= scope.lookupvar "nsq::config::nsqdhttpaddress" %>:<%= scope.lookupvar "nsq::config::nsqdhttpport" %></string>
       <string>-tcp-address=<%= scope.lookupvar "nsq::config::nsqdtcpaddress" %>:<%= scope.lookupvar "nsq::config::nsqdtcpport" %></string>
+      <string>-lookupd-tcp-address=<%= scope.lookupvar "nsq::config::nsqlookupdtcpaddress" %>:<%= scope.lookupvar "nsq::config::nsqlookupdtcpport" %></string>
     </array>
 
     <key>RunAtLoad</key>
