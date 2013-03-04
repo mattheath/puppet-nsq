@@ -6,4 +6,10 @@ class nsq::config {
   $logdir    = "${boxen::config::logdir}/nsq"
   $bindir    = "${boxen::config::homebrewdir}/bin"
 
+  $nsqdhttpaddress = "0.0.0.0"
+  $nsqdhttpport    = "14151"
+
+  $nsqdtcpaddress  = "0.0.0.0"
+  $nsqdtcpport     = "14150"
+
 }
