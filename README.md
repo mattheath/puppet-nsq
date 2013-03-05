@@ -18,7 +18,9 @@ o8o        `8  8""88888P'   `Y8bood8P'Ybd'
 include nsq
 ```
 
-This will launch nsqd and nsqlookupd as services, and point nsqd at nsqlookupd.
+This will launch [nsqd](https://github.com/bitly/nsq/blob/master/nsqd/README.md) and [nsqlookupd](https://github.com/bitly/nsq/blob/master/nsqlookupd/README.md) as services, and point nsqd at nsqlookupd.
+
+The [nsqadmin](https://github.com/bitly/nsq/blob/master/nsqadmin/README.md) web UI will also be set up at [localhost:14171](http://localhost:14171/).
 
 ## Required Puppet Modules
 
