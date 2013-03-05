@@ -54,4 +54,18 @@ class nsq {
     ensure  => running,
   }
 
+  # Fire up our nsqadmin service
+
+  file { '/Library/LaunchDaemons/dev.nsqadmin.plist':
+    content => template('nsq/dev.nsqadmin.plist.erb'),
+    group   => 'wheel',
+    owner   => 'root',
+    require => Package['boxen/brews/nsq'],
+    notify  => Service['dev.nsqadmin'],
+  }
+
+  service { 'dev.nsqadmin':
+    ensure  => running,
+  }
+
 }

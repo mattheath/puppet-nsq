@@ -16,4 +16,7 @@ class nsq::config {
   $nsqlookupdtcpaddress  = "0.0.0.0"
   $nsqlookupdtcpport     = "14160"
 
+  $nsqadminhttpaddress = "0.0.0.0"
+  $nsqadminhttpport    = "14171"
+
 }
