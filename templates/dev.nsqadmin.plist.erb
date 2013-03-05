@@ -14,6 +14,7 @@
     <key>ProgramArguments</key>
     <array>
       <string><%= scope.lookupvar "nsq::config::bindir" %>/nsqadmin</string>
+      <string>-template-dir=<%= scope.lookupvar "nsq::config::templatedir" %></string>
       <string>-http-address=<%= scope.lookupvar "nsq::config::nsqadminhttpaddress" %>:<%= scope.lookupvar "nsq::config::nsqadminhttpport" %></string>
       <string>-lookupd-http-address=<%= scope.lookupvar "nsq::config::nsqlookupdhttpaddress" %>:<%= scope.lookupvar "nsq::config::nsqlookupdhttpport" %></string>
       <string>-nsqd-http-address=<%= scope.lookupvar "nsq::config::nsqdhttpaddress" %>:<%= scope.lookupvar "nsq::config::nsqdhttpport" %></string>

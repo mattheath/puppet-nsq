@@ -8,7 +8,10 @@ class Nsq < Formula
   version '0.2.18-boxen1'
 
   def install
-    # We only need to symlink files in ./bin into the path
+    # Symlink files in ./bin into the path
     prefix.install Dir['bin']
+
+    # Install nsqadmin templates in share
+    share.install ['share/nsqadmin']
   end
 end
