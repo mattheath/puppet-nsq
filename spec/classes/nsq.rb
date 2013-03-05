@@ -8,7 +8,14 @@ describe 'nsq' do
     }
   end
 
-  it { should include_class('homebrew') }
-  it { should contain_homebrew__formula('nsq') }
-  it { should contain_package('boxen/brews/nsq') }
+  it do
+    should include_class('homebrew')
+    should contain_homebrew__formula('nsq')
+    should contain_package('boxen/brews/nsq')
+
+    should contain_service('dev.nsqd').with(:ensure => 'running')
+    should contain_service('dev.nsqlookupd').with(:ensure => 'running')
+    should contain_service('dev.nsqadmin').with(:ensure => 'running')
+  end
+
 end
