@@ -1,3 +1,5 @@
+# Public: Config parameters for NSQ
+#
 class nsq::config {
   require boxen::config
 
@@ -7,17 +9,17 @@ class nsq::config {
   $bindir      = "${boxen::config::homebrewdir}/bin"
   $templatedir = "${boxen::config::homebrewdir}/share/nsqadmin/templates"
 
-  $nsqdhttpaddress = "0.0.0.0"
-  $nsqdhttpport    = "14151"
-  $nsqdtcpaddress  = "0.0.0.0"
-  $nsqdtcpport     = "14150"
+  $nsqdhttpaddress = '0.0.0.0'
+  $nsqdhttpport    = '14151'
+  $nsqdtcpaddress  = '0.0.0.0'
+  $nsqdtcpport     = '14150'
 
-  $nsqlookupdhttpaddress = "0.0.0.0"
-  $nsqlookupdhttpport    = "14161"
-  $nsqlookupdtcpaddress  = "0.0.0.0"
-  $nsqlookupdtcpport     = "14160"
+  $nsqlookupdhttpaddress = '0.0.0.0'
+  $nsqlookupdhttpport    = '14161'
+  $nsqlookupdtcpaddress  = '0.0.0.0'
+  $nsqlookupdtcpport     = '14160'
 
-  $nsqadminhttpaddress = "0.0.0.0"
-  $nsqadminhttpport    = "14171"
+  $nsqadminhttpaddress = '0.0.0.0'
+  $nsqadminhttpport    = '14171'
 
 }

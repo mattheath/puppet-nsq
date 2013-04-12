@@ -1,3 +1,10 @@
+# Public: Install NSQ and run nsqd, nsqlookupd and nsqadmin as
+# persistent services
+#
+# Examples
+#
+#   include nsq
+#
 class nsq {
   include nsq::config
   include homebrew
