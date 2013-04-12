@@ -1,5 +1,7 @@
 # NSQ Puppet Module for Boxen
 
+[![Build Status](https://travis-ci.org/boxen/puppet-nsq.png)](https://travis-ci.org/boxen/puppet-nsq)
+
 ```
 ooooo      ooo  .oooooo..o   .oooooo.
 `888b.     `8' d8P'    `Y8  d8P'  `Y8b
