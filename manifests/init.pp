@@ -23,7 +23,7 @@ class nsq {
   }
 
   package { 'boxen/brews/nsq':
-    ensure => '0.2.18-boxen1',
+    ensure => '0.2.21-boxen1',
   }
 
   # Make ports and listening addresses available as environment vars
