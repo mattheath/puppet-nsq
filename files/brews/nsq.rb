@@ -10,8 +10,5 @@ class Nsq < Formula
   def install
     # Symlink files in ./bin into the path
     prefix.install Dir['bin']
-
-    # Install nsqadmin templates in share
-    share.install ['share/nsqadmin']
   end
 end
